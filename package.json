@@ -1,0 +1,9 @@
+{
+  "name": "dukaan-munshi",
+  "version": "1.0.0",
+  "description": "A private khata for small shops: say what happened in Hindi, Hinglish or English, and a local Gemma model writes the ledger and the polite reminders.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "test": "node test/run.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

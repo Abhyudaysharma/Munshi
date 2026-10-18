@@ -1,0 +1,10 @@
+{
+  "name": "Dukaan Munshi",
+  "short_name": "Munshi",
+  "description": "Bolo, munshi likh lega. A private khata for small shops.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbf4e4",
+  "theme_color": "#7a1f1f",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

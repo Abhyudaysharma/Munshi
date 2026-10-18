@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dukaan Munshi</title>
+<meta name="theme-color" content="#7a1f1f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">📒</span><div><h1>Dukaan Munshi</h1><p class="sub">Bolo, munshi likh lega.</p></div></div>
+  <div class="owed"><span class="lbl">Total baaki</span><b id="total">₹0</b></div>
+</header>
+
+<main>
+  <div id="banner" class="banner" hidden></div>
+
+  <section class="card capture">
+    <label for="shop" class="mini">Dukaan ka naam <span class="hint">(goes on reminders)</span></label>
+    <input id="shop" placeholder="e.g. Gupta General Store" maxlength="40" autocomplete="off">
+    <label for="say" class="mini">Kya hua? Boliye ya likhiye</label>
+    <textarea id="say" rows="3" placeholder="Sharma ji ne 500 udhaar liya, Gupta ji ne 200 diye"></textarea>
+    <div class="row">
+      <button id="mic" class="ghost" type="button" aria-label="Speak">🎙️ Bolo</button>
+      <button id="go" class="primary" type="button">Likh do ✍️</button>
+    </div>
+    <div class="chips" id="examples"></div>
+    <div id="review" hidden>
+      <p class="mini">Munshi ne yeh samjha. Theek hai? <span class="hint">Fix anything, then save.</span></p>
+      <div id="reviewRows"></div>
+      <div class="row"><button id="discard" class="ghost" type="button">Raddi</button><button id="save" class="primary" type="button">Khata mein likho ✅</button></div>
+    </div>
+    <p id="msg" class="msg" role="status"></p>
+  </section>
+
+  <section class="card">
+    <div class="row between"><h2>Khata</h2><input id="find" class="find" placeholder="Search name" aria-label="Search"></div>
+    <div id="list"></div>
+    <p id="empty" class="empty">Khata khaali hai. Upar kuch bolo, ya <button id="demo" class="link" type="button">demo khata</button> kholo.</p>
+  </section>
+</main>
+
+<footer>
+  <button id="csv" class="link" type="button">Export CSV</button> ·
+  <button id="wipe" class="link" type="button">Clear everything</button>
+  <p>Your khata lives only in this browser. Nothing is uploaded.</p>
+</footer>
+
+<dialog id="dlg">
+  <form method="dialog" class="dlgbox">
+    <h3 id="dlgTitle">Reminder</h3>
+    <div class="row">
+      <select id="tone" aria-label="Tone"><option value="meethi">Meethi</option><option value="seedhi">Seedhi</option><option value="mazaakiya">Mazaakiya</option></select>
+      <select id="lang" aria-label="Language"><option value="hinglish">Hinglish</option><option value="hi">हिन्दी</option><option value="en">English</option></select>
+      <button id="regen" class="ghost" type="button">Dobara</button>
+    </div>
+    <textarea id="remMsg" rows="5" aria-label="Message"></textarea>
+    <label class="mini" for="phone">Phone (optional, for WhatsApp)</label>
+    <input id="phone" inputmode="tel" placeholder="98xxxxxxxx" maxlength="14">
+    <p id="remNote" class="hint"></p>
+    <div class="row"><button value="close" class="ghost">Band karo</button><button id="copy" class="ghost" type="button">Copy</button><a id="wa" class="primary btn" target="_blank" rel="noopener">WhatsApp</a></div>
+  </form>
+</dialog>
+
+<script src="khata.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

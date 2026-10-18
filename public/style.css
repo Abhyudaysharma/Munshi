@@ -1,0 +1,48 @@
+:root{--paper:#fbf4e4;--ink:#2b2118;--muted:#7b6a58;--line:#e6d6b8;--red:#7a1f1f;--red2:#a42d2d;--green:#2f6b3b;--card:#fffaf0;--gold:#d99a1e}
+@media (prefers-color-scheme:dark){:root{--paper:#1c1712;--ink:#f1e6d2;--muted:#b3a38c;--line:#3a3025;--red:#e08a7a;--red2:#e9a090;--green:#7fc58e;--card:#251f18;--gold:#f0b441}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Devanagari",sans-serif;
+  background-image:repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px;background:#7a1f1f;color:#fff3df;border-bottom:4px solid var(--gold)}
+.brand{display:flex;gap:10px;align-items:center}.logo{font-size:30px}
+h1{margin:0;font-size:20px;letter-spacing:.2px}.sub{margin:0;font-size:13px;opacity:.85}
+.owed{text-align:right}.owed .lbl{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;opacity:.8}.owed b{font-size:24px}
+main{max-width:640px;margin:0 auto;padding:14px 16px 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:14px 0;box-shadow:0 2px 0 var(--line)}
+h2{margin:0 0 6px;font-size:17px}
+.mini{display:block;margin:10px 0 4px;font-size:13px;font-weight:600;color:var(--muted)}.hint{font-weight:400;color:var(--muted);font-size:12px}
+input,textarea,select{width:100%;font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px}
+textarea{resize:vertical}
+select{width:auto}
+:focus-visible{outline:3px solid var(--gold);outline-offset:1px}
+.row{display:flex;gap:8px;margin-top:10px;align-items:center}.row.between{justify-content:space-between;margin-top:0}
+button,.btn{font:inherit;border-radius:10px;padding:10px 14px;border:1px solid var(--line);cursor:pointer;background:var(--card);color:var(--ink);min-height:44px}
+.primary{background:var(--red);color:#fff;border-color:var(--red);font-weight:600;flex:1;text-align:center;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+@media (prefers-color-scheme:dark){.primary{color:#1c1712}}
+.ghost{background:transparent}
+.link{background:none;border:0;color:var(--red);text-decoration:underline;padding:0;min-height:0;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chips button{font-size:12.5px;padding:6px 10px;min-height:0;border-radius:99px;color:var(--muted)}
+.msg{min-height:1.2em;margin:8px 0 0;font-size:14px;color:var(--muted)}.msg.err{color:#b3261e}
+.banner{background:#fff1c9;color:#4a3500;border:1px solid var(--gold);border-radius:12px;padding:10px 12px;font-size:14px;margin-top:12px}
+.banner a{color:#7a1f1f}
+.rrow{display:grid;grid-template-columns:96px 1fr 84px 36px;gap:6px;margin-top:8px}
+.rrow input,.rrow select{padding:8px;width:100%}
+.rrow button{padding:0;min-height:0}
+.cust{border-top:1px dashed var(--line);padding:10px 0}
+.cust:first-child{border-top:0}
+.ctop{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cname{font-weight:650}.cmeta{font-size:12.5px;color:var(--muted)}
+.bal{font-weight:700;font-size:18px;color:var(--red2)}.bal.clear{color:var(--green)}
+.cbtns{display:flex;gap:6px;margin-top:8px}.cbtns button{padding:6px 12px;min-height:36px;font-size:14px}
+.hist{margin:8px 0 0;padding:0;list-style:none;font-size:14px}
+.hist li{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px dotted var(--line)}
+.hist .j{color:var(--green)}.hist .u{color:var(--red2)}
+.hist button{padding:0 6px;min-height:0;border:0;background:none;color:var(--muted)}
+.empty{color:var(--muted);text-align:center;margin:14px 0 6px}
+.find{max-width:170px;padding:7px 10px}
+footer{max-width:640px;margin:0 auto;padding:6px 16px 36px;text-align:center;font-size:13px;color:var(--muted)}
+dialog{border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--ink);padding:0;width:min(520px,calc(100vw - 24px))}
+dialog::backdrop{background:rgba(20,10,0,.5)}
+.dlgbox{padding:16px}.dlgbox h3{margin:0 0 4px}
+.dlgbox .row select{flex:1}
+@media (max-width:420px){.rrow{grid-template-columns:84px 1fr 72px 32px}}
